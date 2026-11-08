@@ -1,43 +1,44 @@
-# FayZawn hybrid inference policy — proposed v1
+# FayZawn hybrid inference policy — v1.1 (user-approved routing rules)
 
-**State: design and test specification; NOT yet enforced by Hermes.** Approved direction: local-first, controlled cloud escalation, preserve current installation and settings. Do not claim this Markdown implements a runtime router.
+**Policy selected 2026-11-08:** Allow cloud inference for nonsensitive tasks through **explicitly approved providers**, while requiring explicit approval for sensitive data and paid usage. **Runtime enforcement status: NOT IMPLEMENTED or TESTED.** This document is a contract, not a functioning privacy or billing firewall.
 
-## Observed environment (2026-11-08)
-- Hermes Agent 0.23.0, local config v52; provider `ollama-launch`, model `qwen3.8:27b`; gateway running; no messaging platforms.
-- Ollama 0.40.15; `qwen3.8:27b` Q4_K_M, 27.3B, 17GB disk; 71% CPU / 29% GPU at 4096 context.
-- Benchmark: first test 100 generated tokens at 1.38 tok/s, blank visible response; warm `think=false` test returned "FayZawn is online." in 8 tokens, 4.55s generation (~1.76 tok/s). Model works but is too slow for responsive primary chat.
-- Hermes reports Nous Portal and OpenAI Codex authenticated. Auth does not guarantee free or unlimited inference.
-- Existing `SOUL.md`, `USER.md`, 20 sessions, 2,190 messages; preserve.
-- Hermes image generation and Telegram dependencies are not ready.
+## Approved behavior, not blanket provider authorization
+- **Local-first** for sensitive/personal context and whenever cloud eligibility is uncertain.
+- **Nonsensitive** prompts may be routed to cloud without per-request approval **only after** Fayt has explicitly approved the specific provider/model route and its terms, billing status, and transmitted-data scope. Authentication alone is NOT provider approval.
+- Existing Hermes credentials for Nous Portal and OpenAI Codex are **candidate routes**, not yet approved for unattended routing. No provider-specific approval was given by the general policy choice.
+- **Sensitive**: secrets, credentials, personal memories, private files, unpublished work, sensitive personal or third-party data, financial/health/legal records, or messages whose context makes them confidential. Require approval describing destination and minimum payload **for each sensitive transmission**. Approval for one disclosure does not authorize another.
+- **Paid**: explicit approval before any incremental charge; no automatic paid API calls or paid fallback. Verify subscription entitlements and quotas; unknown pricing = no automatic cloud routing.
+- **Mixed/ambiguous** requests are sensitive until classified or stripped of sensitive context. Tool results, retrievals, system prompts, conversation history, and attachments are included in the data classification, not just the latest user text.
+- Approval for inference never approves separate external actions: purchases, public posts, contacting third parties, deleting data, disclosing credentials, or changing core identity/permissions still need their own approval.
 
-## Routing tiers
-1. **Local default**: personal context, sensitive content, routine Q&A, drafting, offline tasks. Keep existing Qwen model until a smaller local candidate passes evaluation; do not auto-download or change model.
-2. **Cloud candidate**: user-approved difficult coding, long analysis, advanced planning, or local failure. Candidate providers: already authenticated Nous Portal and OpenAI Codex, subject to verified entitlement and pricing. Do not automatically send confidential content.
-3. **Local specialist**: existing 27B model can be invoked intentionally for difficult private work when latency is acceptable.
+## Cost policy
+- Incremental paid API budget: **$0** until Fayt explicitly changes it.
+- Per-task and daily paid API ceilings: **$0**. No claimed hard spend guarantee unless an actual enforceable mechanism is verified.
+- Subscription-included cloud routes are eligible only if their permitted use, limits, and lack of incremental billing are confirmed and Fayt approves the provider.
+- Log provider, model, purpose, approval record, estimated and actual charges (when available), and outcome. Never log raw credentials or sensitive prompts.
+- Quota exhausted, price unknown, or billing uncertain => stay local, request approval, or stop. Never silently fail over.
 
-## Hard approval gates
-- No automatic cloud transmission until Fayt approves **both** the provider and the data category; present a concise description of what will be transmitted and whether attachments/memory are included.
-- Explicit approval before first use of a paid API route and before any change to spend limits, model provider, data retention policy, or third-party recipients.
-- All consequential external actions (spend, purchases, publishing, contacting third parties, deletion, secrets, core identity or permissions) require separate approval regardless of inference provider.
-- Never bypass approval using Hermes `--yolo`, `-z` oneshot (auto-bypasses approvals), or unrestricted cron/agent automation.
-- Unknown price, quota, billing status, or privacy classification => **no cloud escalation**; request clarification or remain local.
+## Model routing
+1. Local default: existing Ollama `qwen3.8:27b` until a smaller local model is benchmarked and explicitly chosen; preserve existing Hermes config.
+2. Approved cloud for nonsensitive work: complex coding, analysis, research, or latency-sensitive tasks where a permitted cloud route improves results.
+3. Local 27B specialist for complex private tasks when slower inference is acceptable.
+4. No automatic cloud fallback for errors until enforcement tests prove classification, provider allowlist, approval, and cost gates are applied **before** every request.
 
-## Initial budget policy (pending Fayt confirmation)
-- Default **$0 approved incremental paid API spend**.
-- No automatic paid API calls; account-included subscription routes require verified entitlement and explicit provider approval, even if estimated marginal price is $0.
-- Before each cloud call show provider, model, expected data transmitted, estimated cost if knowable, and reason. Log actual usage/cost when provider exposes it; never misrepresent unknown charges as $0.
-- Per-task and daily monetary ceilings remain $0 until Fayt explicitly sets amounts. If the route cannot enforce a hard cap, do not describe it as hard-capped.
-- Stop cloud routing when cap is reached, usage cannot be reliably checked, or credentials fail; do not silently fail over to a paid provider.
+## Runtime enforcement requirements
+- Classify the complete outbound payload, including memory/tool attachments, before dispatch.
+- Use a **default-deny provider/model allowlist**, plus explicit per-request consent for sensitive disclosures.
+- Enforce paid-route approval and a verified billing cap or block paid routes altogether.
+- Disable or guard unreviewed fallbacks, delegated agents, cron, tool-side model calls, and gateways that could bypass policy.
+- Do not use `--yolo` or `hermes -z` as a substitute for interactive approvals; oneshot auto-bypasses tool approvals.
+- Maintain audit records without private prompt contents; test unauthorized provider, sensitive prompt, paid route, fallback, tool call, and gateway scenarios.
+- Back up existing Hermes configuration and identity files before any changes. Do not overwrite sessions, memory, credentials, or the current `SOUL.md`.
 
-## Privacy and audit
-- Minimize cloud payload; omit secrets, unnecessary chat history, and memory by default.
-- Keep a local decision log: timestamp, task category, chosen route, reason, approval reference, model, estimated/actual charge, status. Exclude raw sensitive prompts and credentials.
-- For Telegram, authenticate recipient before enabling gateway. Quiet hours and review schedule remain governed by AGENTS.md.
-- Never commit private local `.env`, Hermes config, logs, or memory.
+## Observed local environment
+Hermes 0.23.0, config v52, provider `ollama-launch`, Qwen3.8 27B, gateway running. Nous Portal and OpenAI Codex are authenticated, but their route terms and privacy properties have not been verified. Qwen 27B generated ~1.76 tokens/s warm with thinking disabled and 71% CPU/29% GPU; preserve it while evaluating a smaller everyday model.
 
-## Implementation gates
-1. Capture sanitized Hermes status, model/fallback/config command help; inspect `SOUL.md` headings without revealing secrets.
-2. Benchmark a smaller locally compatible tool-capable model after Fayt approves any download. Compare latency, quality, tool calls, memory, VRAM.
-3. Confirm Hermes-supported routing/fallback mechanisms; fallback alone is not an approval or privacy firewall.
-4. Implement a fail-closed approval and cost enforcement wrapper or supported gateway control; test no unapproved cloud calls, no over-budget calls, and no private payload leakage.
-5. Only then change local Hermes configuration with a timestamped backup and rollback; test end-to-end.
+## Next implementation gates
+1. Inspect `hermes model --help`, `hermes fallback --help`, `hermes config --help`, and `hermes gateway --help`; do not share tokens/config contents.
+2. Inspect existing `SOUL.md` headings and model routing settings **locally**, with sanitized output.
+3. Confirm which authenticated cloud provider Fayt authorizes first; review entitlement, terms, costs, and privacy.
+4. Build and test fail-closed enforcement before switching any provider or enabling unattended routing.
+5. Apply only reviewed changes with backup and rollback, then test local and cloud flows.

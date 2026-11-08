@@ -52,3 +52,17 @@ Codex OAuth can be logged in even when a selected model is invalid. The previous
 No automated cloud inference, scheduled messages, external posts, or additional paid API routes are activated by this package.
 
 Official docs: https://hermes-agent.nousresearch.com/docs/user-guide/profile-distributions
+
+## Safety gate added in v2.1.1
+
+**Do not run the retired `scripts/install-fayzawn.ps1`**. It now stops without changing anything. Older Git revisions of that script changed the global default SOUL and model.
+
+**Public-data warning:** Previously tracked `memories/USER.md` and `memories/MEMORY.md` were removed from the current distribution source. They remain accessible in earlier Git commits, forks, and caches. This PR does not rewrite Git history. Review the exposure and consider making the repository private; if full history removal is required, coordinate a separately approved history rewrite and credential review. Never put private memory seeds back into a public Git repository.
+
+**Before installation:** check `hermes profile list`, confirm no `fayzawn` profile exists, and back up meaningful data. The distribution-owned root documents, including `SOUL.md`, `AGENTS.md`, `GOVERNANCE.md`, and cultural references, can be replaced during updates. No `config.yaml` is shipped; model selection is a separate local step.
+
+**Preflight:** after merging this PR, run the read-only `scripts/check-distribution-source.ps1` from a reviewed local checkout (or inspect its contents before running). It checks source-file presence and dangerous packaging patterns; it is not an end-to-end installer test, a secret scanner, or a runtime privacy firewall.
+
+**Bot Mode:** a Hermes Desktop Bot registration is not guaranteed to be identical to a CLI profile. Confirm whether the installed profile can be selected in your desktop version before creating another bot.
+
+**Privacy/cost:** the hybrid policy is documentation, not a fail-closed router or billing limit. No cloud fallback, Telegram, cron, or auto-approval should be enabled during the first local-only test.

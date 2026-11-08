@@ -39,5 +39,5 @@ cron/jobs.json
 __pycache__/
 *.pyc
 
-# Note: .gitignore does not untrack files already committed.
-# Existing public curated seed files under memories/ remain tracked.
+# History warning: .gitignore cannot remove previously published files from Git history.
+# Runtime secrets and private memory must never be committed.

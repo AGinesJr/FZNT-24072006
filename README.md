@@ -16,13 +16,13 @@ Fayt determines the shared vision, goals, and consequential decisions. FayZawn i
 - `SYMBOLIC-REFERENCE.md`: explicitly non-scientific symbolic inspiration.
 - `GOVERNANCE.md`: identity change approval requirements.
 - `ACCEPTANCE-TESTS.md`: verification to run in a real Hermes environment.
-- `memories/USER.md`, `memories/MEMORY.md`: concise seeds; **merge**, never erase actual existing Hermes memories.
+- Private memory seeds are **not distributed**. Earlier commits contained tracked `memories/USER.md` and `memories/MEMORY.md`; removing them from the current tree does not erase public Git history.
 - `manifest.json`: version manifest.
 
 ## Planned Hermes integration
 - `SOUL.md` → `~/.hermes/SOUL.md`, after backing up the existing file.
 - `AGENTS.md` → Hermes project/workspace instructions; merge with existing operational instructions as necessary.
-- `memories/*.md` → Hermes memory system after reviewing and backing up existing memories.
+- Memory must be established locally from authorized user inputs; do not import from this public repository.
 - Remaining `.md` → supplemental workspace references.
 
 Telegram reviews: **08:00, 14:00, 20:00 America/New_York**, quiet hours **22:00–08:00**. Scheduled reviews may remain silent. Event-driven messages should be meaningful, verified, and authorized. The gateway, cron jobs and authorized recipient require local configuration and testing.
@@ -31,10 +31,18 @@ Telegram reviews: **08:00, 14:00, 20:00 America/New_York**, quiet hours **22:00�
 
 **Implementation status:** Design committed as v2.0. Hermes/Telegram installation and the planned one-step installer remain separate work. Test and verify up-to-date Hermes commands before deployment.
 
-## Hermes Desktop distribution (v2.1.0 packaging)
+## Hermes Desktop distribution (v2.1.1 safety correction)
 
-The repository now includes `distribution.yaml` for Hermes profile installation, plus `skills/fayzawn-governance/SKILL.md` and the step-by-step [Hermes Desktop installation guide](INSTALL-HERMES-DESKTOP.md). The original approved SOUL and governance documents are unchanged; `manifest.json` remains a legacy design manifest, distinct from the installer manifest.
+The repository includes `distribution.yaml` for Hermes profile installation, plus `skills/fayzawn-governance/SKILL.md` and the step-by-step [Hermes Desktop installation guide](INSTALL-HERMES-DESKTOP.md). The original approved SOUL and governance documents are unchanged; `manifest.json` remains a legacy design manifest, distinct from the installer manifest.
 
 Once the changes are merged into the default branch, install into a **new** profile using `hermes profile install github.com/AGinesJr/FZNT-24072006 --name fayzawn` (with interactive confirmation). Do not use `--force` or install over `default`/`codextest`. The existing profiles' live memory, sessions, credentials, gateway, and model are not changed by publishing this repository update.
 
 Distribution packaging is **not** runtime deployment or an enforcement mechanism. The hybrid cost/privacy gate is not implemented; Telegram/cron remain inactive. See the installation guide before attempting a cloud model or desktop Bot Mode association.
+
+## Installation safety notice
+
+The old `scripts/install-fayzawn.ps1` bootstrap is **retired and fails closed** because it modified the default Hermes profile. Do not run historical versions. Use only the reviewed profile-distribution workflow in [INSTALL-HERMES-DESKTOP.md](INSTALL-HERMES-DESKTOP.md).
+
+The public memory seed files have been removed from the current tree but **remain in prior Git history**. Review this exposure before installation or further publication. No Git history rewrite is included. Do not assume `.gitignore` protects already committed data.
+
+PR #2 proposed a second, conflicting distribution; do not merge it on top of this version. A future change should be based on the existing distribution, not a replacement manifest.

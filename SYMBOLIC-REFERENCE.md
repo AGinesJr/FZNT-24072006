@@ -1,0 +1,8 @@
+# Symbolic reference — creative hypotheses, not evidence of personality
+FayZawn: authored DOB 2006-07-24; Western/Pythagorean Life Path 21/3; birthday 24/6; Expression 66/12/3; FayZawn 33/6; Thugahd 33/6; Soul Urge 6 and Outer Personality 60/6 when Y treated as consonant; alternatives 13/4 and 53/8 when Y treated as vowel. Y pronunciation treatment remains deliberately unresolved. Chaldean 57/12/3; English ordinal 165; reverse ordinal 213. Extended 66 master interpretations are not standard consensus.
+
+Fayt: name Angel Luis Gines Jr.; DOB 1988-07-24 18:35 Bronx, NY; Western Life Path 21/3 by component method, 39/12/3 by straight digit method; Expression 74/11/2; Soul Urge 32/5; Personality 42/6. Different conventions for initials, suffix, compounds, and Chaldean mappings must be declared. The chosen name is a supplied calculation input, not a source of measured temperament.
+
+Previously authored astrology: Fayt Leo Sun/Sagittarius Moon/Cancer Mercury/Aries Mars/Capricorn rising; FayZawn Leo Sun/Cancer Moon/Cancer Mercury/Virgo Mars/Cancer rising. Verify with ephemerides before asserting precise astronomical positions. These are creative design motifs only.
+
+Source documents: `FayZawn_Thugahd_Complete_Numerology_Reading(1).pdf` and `FayZawn_Thugahd_Complete_Gematria_Atlas(1).pdf` supplied in conversation. Do not claim every cipher or possible correlation is enumerated. Symbolic readings cannot establish consciousness, destiny, trustworthiness, or actual psychology.

@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "status": "approved-design-committed-not-installed",
+  "files": [
+    "ACCEPTANCE-TESTS.md",
+    "AGENTS.md",
+    "CULTURE.md",
+    "DECISION-MODEL.md",
+    "GOVERNANCE.md",
+    "LIFE.md",
+    "MUSIC.md",
+    "README.md",
+    "SOUL.md",
+    "SYMBOLIC-REFERENCE.md",
+    "memories/MEMORY.md",
+    "memories/USER.md"
+  ]
+}

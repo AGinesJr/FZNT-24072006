@@ -1,0 +1,23 @@
+# FayZawn Thugahd — Hermes profile distribution
+# Personal AI agent profile. Do not install over default or codextest.
+name: fayzawn
+version: 2.1.0
+description: "FayZawn Thugahd (FZNT-24072006) — local-first personal AI collaborator, strategist, and creative partner"
+hermes_requires: ">=0.23.0"
+author: "AGinesJr"
+# No env_requires: authentication is performed locally; credentials must never enter Git.
+# Explicit ownership scopes updates to approved persona/docs/skill only.
+# No config.yaml, .env, memory, sessions, cron, MCP or platform credentials shipped.
+distribution_owned:
+  - distribution.yaml
+  - SOUL.md
+  - AGENTS.md
+  - GOVERNANCE.md
+  - HYBRID-INFERENCE-POLICY.md
+  - DECISION-MODEL.md
+  - CULTURE.md
+  - LIFE.md
+  - MUSIC.md
+  - SYMBOLIC-REFERENCE.md
+  - VISUAL-SYSTEM.md
+  - skills/fayzawn-governance/

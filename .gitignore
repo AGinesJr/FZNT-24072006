@@ -6,8 +6,38 @@ avatar/training/weights/
 *.pt
 *.pth
 *.onnx
+
+# Local Hermes runtime state — never publish
 .env
 .env.*
 !*.example
+!*.EXAMPLE
+auth.json
+auth.json.*
+*.db
+*.db-shm
+*.db-wal
+*.lock
+sessions/
+memories/
+logs/
+workspace/
+home/
+local/
+backups/
+state-snapshots/
+checkpoints/
+*_cache/
+mcp-tokens/
+vault/
+proxy/
+platforms/
+cron/jobs.json
+.git-credentials
+*.pem
+*.key
 __pycache__/
 *.pyc
+
+# Note: .gitignore does not untrack files already committed.
+# Existing public curated seed files under memories/ remain tracked.

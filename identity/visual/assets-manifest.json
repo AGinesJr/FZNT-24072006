@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "identity": "FayZawn Thugahd",
+  "serial": "FZNT-24072006",
+  "repository_visibility": "public",
+  "publication_authorized": true,
+  "weights_publication_authorized": false,
+  "source_assets": [
+    {
+      "filename": "FayZawn_candid_1.jpeg",
+      "bytes": 711827,
+      "sha256_prefix": "19f701d64d909a4b",
+      "repo_path": "identity/visual/assets/FayZawn_candid_1.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_candid_2.jpeg",
+      "bytes": 658932,
+      "sha256_prefix": "941dbcd28f7eea7f",
+      "repo_path": "identity/visual/assets/FayZawn_candid_2.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_candid_3.jpeg",
+      "bytes": 655696,
+      "sha256_prefix": "bbd550b3fd4f638f",
+      "repo_path": "identity/visual/assets/FayZawn_candid_3.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_candid_4.jpeg",
+      "bytes": 524824,
+      "sha256_prefix": "948c8a0639f57430",
+      "repo_path": "identity/visual/assets/FayZawn_candid_4.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_candid_5.jpeg",
+      "bytes": 643833,
+      "sha256_prefix": "d727f55c074606f1",
+      "repo_path": "identity/visual/assets/FayZawn_candid_5.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_candid_6.jpeg",
+      "bytes": 564275,
+      "sha256_prefix": "f8ac24b4eef59190",
+      "repo_path": "identity/visual/assets/FayZawn_candid_6.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_emotion_expression grid.jpeg",
+      "bytes": 810501,
+      "sha256_prefix": "ab7acb8a66758366",
+      "repo_path": "identity/visual/assets/FayZawn_emotion_expression grid.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_face_1.jpeg",
+      "bytes": 680741,
+      "sha256_prefix": "99020cf1a2d50503",
+      "repo_path": "identity/visual/assets/FayZawn_face_1.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_face_2.jpeg",
+      "bytes": 652965,
+      "sha256_prefix": "ac3dd9531b05c2db",
+      "repo_path": "identity/visual/assets/FayZawn_face_2.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_face_3.jpeg",
+      "bytes": 654894,
+      "sha256_prefix": "0f00ee51981bd743",
+      "repo_path": "identity/visual/assets/FayZawn_face_3.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_fullbody_back.jpeg",
+      "bytes": 475070,
+      "sha256_prefix": "632329a288c1c36c",
+      "repo_path": "identity/visual/assets/FayZawn_fullbody_back.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_fullbody_front.jpeg",
+      "bytes": 611914,
+      "sha256_prefix": "98d47d5e9e1d2f64",
+      "repo_path": "identity/visual/assets/FayZawn_fullbody_front.jpeg",
+      "published": false
+    },
+    {
+      "filename": "FayZawn_subemotion_expression_grid.jpeg",
+      "bytes": 761359,
+      "sha256_prefix": "dbee198c9c1c33be",
+      "repo_path": "identity/visual/assets/FayZawn_subemotion_expression_grid.jpeg",
+      "published": false
+    }
+  ],
+  "note": "These are planned source assets. Metadata publication does not imply image bytes were uploaded. SHA-256 prefix is first 16 hexadecimal digits."
+}

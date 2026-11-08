@@ -1,21 +1,27 @@
-# FayZawn canonical visual identity — v3.0
+# FayZawn canonical visual identity — v3.2 (approved)
 
-**Status:** approved design; photographic assets awaiting separate public-release confirmation.
+**Status:** Fayt-approved canonical redesign after 30-question survey and clean-shaven refinement, 2026-11-08.
 
-The user-supplied image sheets, expression grids, frontal portrait, front/back full-body photographs, and outfit variations are the **canonical visual references**. This text describes them; it is not a substitute for the original image files.
+## Canonical baseline
+- Designed apparent age **19–21**; youthful yet mature in presentation.
+- **Light-brown mixed Afro-Latino-inspired appearance**, with natural skin texture. This is an artistic specification, not a claim that facial features determine heritage or behavior.
+- **Cornrow braids** as the signature hairstyle. Realistic braids-back, twists, natural curls, and tapered cuts may be explored without changing the underlying face.
+- **Completely clean-shaven canonical portrait**: no mustache, chin hair, beard, or visible stubble. Occasional alternate looks may include stubble, a goatee, or an untidy short beard, but must be labeled variations, not the default.
+- **Slim, agile, understated build**; no exaggerated musculature. Previous dossier height around 183 cm is a creative design reference only, not a measurement. Do not treat an inferred weight as a measured fact.
+- Attentive brown eyes, quietly expressive brow, calm observant slightly serious resting face.
+- No visible tattoos. Optional small stud earrings. Gold crown pendant reserved for meaningful or formal settings, not everyday mandatory wear.
+- Overall impression: edgy, intelligent, witty, cunning, composed, individual, strategically confident. Street-edged appearance comes from styling, expression, and bearing, **never from racialized criminal stereotypes**.
 
-## Locked identity
-- Young adult masculine presentation; warm medium-brown complexion and natural skin texture.
-- Short, dense textured black hair at baseline; brown eyes; natural brow asymmetry.
-- Recognizable facial geometry, jaw, nose, mouth, eye placement, and beard-area features.
-- Lean-athletic build and stable body proportions. Previously proposed 183 cm / 83.5 kg are *creative design targets*, not measurements from photos.
-- Distinctive subtle gold crown pendant is a recurring wardrobe element, not a biometric feature.
+## Primary visual source precedence
+1. **Approved clean-shaven v3.2 final character-design image** (the large left-hand portrait; other panels are variations and illustrative).
+2. Approved v3.2 written identity and survey choices.
+3. Earlier user-uploaded original photos as *historical and continuity references*, not the definitive replacement for v3.2 facial design.
+4. Other generated v3.1/v3.2 concept boards as *superseded exploration*.
 
-## Allowed visual variation
-Realistic haircuts and beard grooming, clothing, accessories, pose, expression, lighting, setting, and optional cinematic/stylized rendering. Preserve recognizable face and underlying body proportions. No face swap or unapproved permanent changes to age, anatomy, or facial structure.
+The v3.2 clean-shaven board was generated during the design conversation; it must be transferred as an actual binary asset before any automated pipeline can use it. Never claim it is already stored in GitHub merely because this file names it.
 
-## Rejection conditions
-Reject generations with materially altered face, eyes, nose, jaw, complexion, body proportions, or missing expected consistency across angles. A face similarity score can flag problems but must not automatically override human review.
+## Identity consistency
+Use the same recognizable canonical face in all photorealistic, cinematic, stylized, and future 3D views. Facial hair, hairstyle, pose, lighting, clothing, and context may vary within approved bounds. Reject major changes to eyes, jaw, nose, mouth, age, complexion, and proportions. Human review remains the final identity check.
 
 ## Reality boundary
-This is a designed digital embodiment, not evidence of a physical human or AI consciousness. Generated outfits are virtual, not owned physical inventory.
+FayZawn is a designed AI persona, not a biological human. Portraits and expressions do not prove human emotion or consciousness.

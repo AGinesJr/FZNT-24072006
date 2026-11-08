@@ -30,3 +30,9 @@ Telegram reviews: **08:00, 14:00, 20:00 America/New_York**, quiet hours **22:00â
 **Security:** never commit Telegram tokens, credentials, local environment files, private keys, or actual private memory exports. This repository is public. Do not put live user data here.
 
 **Implementation status:** Design committed as v2.0. Hermes/Telegram installation and the planned one-step installer remain separate work. Test and verify up-to-date Hermes commands before deployment.
+
+## Hermes Desktop Bot distribution (v0.1.0)
+
+This repository now has a Hermes `distribution.yaml` for the dedicated `fayzawn` profile and a `fayzawn-guide` skill containing the publicly reviewed operating references. See [HERMES-DESKTOP-INSTALL.md](HERMES-DESKTOP-INSTALL.md) for installation and verification steps.
+
+Packaging does **not** install the agent on a Windows computer, enable Telegram, authenticate cloud models, or enforce the $0 spend/privacy policy. No active memory or credentials are part of the package.

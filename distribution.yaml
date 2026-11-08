@@ -1,0 +1,12 @@
+name: fayzawn
+version: 0.1.0
+description: "FayZawn Thugahd (FZNT-24072006) — local-first AI collaborator"
+hermes_requires: ">=0.23.0"
+author: "AGinesJr"
+# No API keys, hosted services, jobs, plugins, or paid routes are provisioned.
+# We intentionally ship no config.yaml so existing model choices remain user-owned.
+# Additional reference files are supplied as an on-demand skill.
+distribution_owned:
+  - distribution.yaml
+  - SOUL.md
+  - skills/fayzawn-guide/

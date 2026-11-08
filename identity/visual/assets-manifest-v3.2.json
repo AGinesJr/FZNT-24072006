@@ -1,0 +1,12 @@
+{
+  "version": "3.2",
+  "role": "approved clean-shaven canonical design board",
+  "filename": "a_highly_detailed_cinematic_character_design_sheet.png",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 2547060,
+  "sha256": "a269d723ce27339d5e3c6966e679dc9c20928b35f647eec30bed2b8dc4aafbf2",
+  "repository_path": "identity/visual/assets/FayZawn_v3.2_Clean_Base.png",
+  "published": false,
+  "notes": "Board contains one primary clean-shaven portrait and secondary grooming variants. LoRA weights remain private."
+}

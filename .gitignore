@@ -1,0 +1,13 @@
+# Private canonical visual references and identity weights
+identity/visual/assets/
+avatar/training/weights/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+.env
+.env.*
+!*.example
+__pycache__/
+*.pyc

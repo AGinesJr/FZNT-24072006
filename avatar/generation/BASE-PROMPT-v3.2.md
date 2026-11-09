@@ -2,7 +2,7 @@
 
 Create a **photorealistic portrait of FayZawn Thugahd**, matching the approved v3.2 clean-base reference image's *recognizable face*.
 
-Apparent age 19–21, light-brown mixed Afro-Latino-inspired presentation, brown attentive eyes, natural skin texture, **neatly patterned cornrow braids**, **entirely clean-shaven face with no beard, mustache, chin hair, or stubble**, slim agile physique, calm observant slightly serious expression, subtle raised eyebrow and controlled head tilt. Refined black/charcoal heavyweight hoodie with clean understated streetwear styling. **No visible tattoos.** Small stud earrings optional. **No gold crown pendant in everyday base portrait.** Soft natural urban light, realistic lens perspective, believable anatomy, understated details, no text or logo overlays.
+Apparent age 19–21, light-brown mixed Afro-Latino-inspired presentation, brown attentive eyes, natural skin texture, **neatly patterned cornrow braids**, **entirely clean-shaven face with no beard, mustache, chin hair, or stubble**, skinny agile physique, calm observant slightly serious expression, subtle raised eyebrow and controlled head tilt. Refined black/charcoal heavyweight hoodie with clean understated streetwear styling. **No visible tattoos.** Small stud earrings optional. **No gold crown pendant in everyday base portrait.** Soft natural urban light, realistic lens perspective, believable anatomy, understated details, no text or logo overlays.
 
 ### Variation rules
 Allow realistic hair changes, occasional stubble/goatee/beard, varied clothes and lighting, meaningful reserved smile, optional studs, occasional crown pendant for meaningful/formal settings. Keep facial geometry consistent with approved reference.
